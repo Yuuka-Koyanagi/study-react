@@ -166,3 +166,7 @@ a.secondary {
     filter: invert();
   }
 }
+
+.title {
+  text-transform: capitalize;
+}
