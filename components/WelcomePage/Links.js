@@ -1,7 +1,7 @@
+import styles from "./Links.module.css";
 import Image from "next/image";
-import styles from "@/styles/Home.module.css";
 
-export function Links() {
+export const Links = () => {
   return (
     <div className={styles.ctas}>
       <a
