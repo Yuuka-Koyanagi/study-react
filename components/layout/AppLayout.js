@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Head from "next/head";
 import styles from "./AppLayout.module.css";
+import { Header } from "./Header";
 import { Footer } from "./Footer";
 
 const geistSans = Geist({
@@ -23,6 +24,7 @@ export const AppLayout = ({ title, children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}>
+        <Header />
         <main className={styles.main}>{children}</main>
         <Footer />
       </div>
