@@ -1,5 +1,5 @@
-import { WelcomePage } from "@/src/components/WelcomePage/WelcomePage";
+import { WelcomePage } from "@/components/WelcomePage";
 
 export default function Home() {
   return <WelcomePage fileName="index" />;
-}
+};
