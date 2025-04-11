@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 import { getDescriptions } from "@/data/WelcomePage/descriptions";
 
@@ -10,10 +10,11 @@ import styles from "./WelcomePage.module.css";
 
 export const WelcomePage = ({ fileName }) => {
   const [count, setCount] = useState(1);
-  const handleClick = () => {
-    setCount(i => i + 1);
-    setCount(i => i + 1);
-  };
+
+  const handleClick = useCallback(() => {
+    console.log(count);
+    if (count < 10) setCount(count + 1);
+  }, [count]);
 
   return (
     <>
