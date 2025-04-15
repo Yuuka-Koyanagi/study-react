@@ -38,7 +38,7 @@ export const WelcomePageLayout = ({ fileName }) => {
       <h1 className={styles.headline}>{fileName} Page</h1>
 
       <ol>
-        {getDescriptions(fileName).map(e => <li key={e}>{e}</li>)}
+        {getDescriptions(fileName).map(c => <li key={c}>{c}</li>)}
       </ol>
 
       <Links />
