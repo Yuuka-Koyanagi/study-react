@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import NAV_ITEMS from "@/data/footerNav";
+import NAV_ITEMS from "@/data/Footer/footerNav";
 
 const FooterLink = ({ href, src, alt, label }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">

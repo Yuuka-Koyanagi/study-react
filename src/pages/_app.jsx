@@ -3,11 +3,17 @@ import Head from "next/head";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
+import { WelcomePageLayout } from "@/components/layouts/WelcomePageLayout";
+
 import "@/styles/globals.css";
 import styles from "@/styles/App.module.css";
 import { geistSans, geistMono } from "@/styles/fonts";
 
 export default function App({ Component, pageProps }) {
+  const getLayout = Component.getLayout || (
+    page => <WelcomePageLayout fileName={pageProps.fileName}>{page}</WelcomePageLayout>
+  );
+
   return (
     <>
       <Head>
@@ -20,7 +26,7 @@ export default function App({ Component, pageProps }) {
         <Header />
 
         <main>
-          <Component {...pageProps} />
+          {getLayout(<Component {...pageProps} />)}
         </main>
 
         <Footer />

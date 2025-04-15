@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { linkItems } from "@/data/WelcomePage/Links";
+import { linkItems } from "@/data/layouts/WelcomePageLayout/Links";
 
 import styles from "./Links.module.css";
 

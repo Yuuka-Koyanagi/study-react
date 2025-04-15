@@ -1,15 +1,9 @@
-import { useEffect } from "react";
+export default function Home() { };
 
-import { WelcomePage } from "@/components/WelcomePage";
-
-export default function Home() {
-  useEffect(() => {
-    document.body.style.backgroundColor = "lightBlue";
-
-    return () => {
-      document.body.style.backgroundColor = "";
+export async function getStaticProps() {
+  return {
+    props: {
+      fileName: "index"
     }
-  }, []);
-
-  return <WelcomePage fileName="index" />;
+  };
 };

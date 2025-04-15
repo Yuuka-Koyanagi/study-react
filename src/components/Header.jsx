@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import NAV_ITEMS from "@/data/siteInfo";
+import NAV_ITEMS from "@/data/Header/siteInfo";
 
 export const Header = () => (
   <header>
