@@ -20,9 +20,7 @@ export const WelcomePageLayout = ({ fileName }) => {
         ? "lightblue"
         : "";
 
-    return () => {
-      document.body.style.backgroundColor = "";
-    };
+    return () => document.body.style.backgroundColor = "";
   }, [router.pathname]);
 
   return (
