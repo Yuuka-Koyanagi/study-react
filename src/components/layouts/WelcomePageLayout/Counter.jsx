@@ -10,7 +10,7 @@ export const Counter = () => {
   const handleClick = () => {
     setCount(count => {
       console.log(count);
-      return count < 10 ? ++count : count;
+      return count < 10 ? count + 1 : count;
     });
   };
 
