@@ -28,7 +28,7 @@ export const TextInputList = () => {
       <button onClick={handleAdd}>追加</button>
 
       <ul>
-        {array.map((v, i) => <li key={i}>{v}</li>)}
+        {array.map(v => <li key={v}>{v}</li>)}
       </ul>
     </>
   );
