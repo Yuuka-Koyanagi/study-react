@@ -1,7 +1,6 @@
 import Head from "next/head";
 
 import { useEffect } from "react";
-import { useRouter } from "next/router";
 
 import { getDescriptions } from "@/data/layouts/WelcomePageLayout/descriptions";
 
@@ -12,16 +11,11 @@ import { Links } from "./Links";
 import styles from "./WelcomePage.module.css";
 
 export const WelcomePageLayout = ({ fileName }) => {
-  const router = useRouter();
-
   useEffect(() => {
-    document.body.style.backgroundColor =
-      router.pathname === "/"
-        ? "lightblue"
-        : "";
+    document.body.style.backgroundColor = "lightblue";
 
     return () => document.body.style.backgroundColor = "";
-  }, [router.pathname]);
+  }, []);
 
   return (
     <>
