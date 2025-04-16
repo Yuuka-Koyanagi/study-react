@@ -8,16 +8,16 @@ export const TextInputList = () => {
       ? setText(e.target.value.trim())
       : alert("5文字以内にしてください");
 
-  const [array, setArray] = useState([]);
+  const [texts, setTexts] = useState([]);
 
   const handleAdd = () => {
-    setArray(a => {
-      if (a.includes(text)) {
+    setTexts(prevTexts => {
+      if (prevTexts.includes(text)) {
         alert("同じ値が含まれています");
-        return a;
+        return prevTexts;
       };
 
-      return [...a, text];
+      return [...prevTexts, text];
     });
   };
 
@@ -28,7 +28,7 @@ export const TextInputList = () => {
       <button onClick={handleAdd}>追加</button>
 
       <ul>
-        {array.map(v => <li key={v}>{v}</li>)}
+        {texts.map(t => <li key={t}>{t}</li>)}
       </ul>
     </>
   );

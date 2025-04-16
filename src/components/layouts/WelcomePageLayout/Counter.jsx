@@ -3,14 +3,14 @@ import { useState } from "react";
 export const Counter = () => {
   const [isShow, setIsShow] = useState(true);
 
-  const handleDisplay = () => setIsShow(isShow => !isShow);
+  const handleDisplay = () => setIsShow(prevIsShow => !prevIsShow);
 
   const [count, setCount] = useState(1);
 
   const handleClick = () => {
-    setCount(count => {
-      console.log(count);
-      return count < 10 ? count + 1 : count;
+    setCount(prevCount => {
+      console.log(prevCount);
+      return prevCount < 10 ? prevCount + 1 : prevCount;
     });
   };
 

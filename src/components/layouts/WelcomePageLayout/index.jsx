@@ -30,7 +30,7 @@ export const WelcomePageLayout = ({ fileName }) => {
       <h1 className={styles.headline}>{fileName} Page</h1>
 
       <ol>
-        {getDescriptions(fileName).map(c => <li key={c}>{c}</li>)}
+        {getDescriptions(fileName).map(d => <li key={d}>{d}</li>)}
       </ol>
 
       <Links />
