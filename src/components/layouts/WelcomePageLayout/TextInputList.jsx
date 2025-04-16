@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const TextBox = () => {
+export const TextInputList = () => {
   const [text, setText] = useState("");
 
   const handleChange = e =>

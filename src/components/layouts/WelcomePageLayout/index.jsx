@@ -6,8 +6,8 @@ import { useRouter } from "next/router";
 import { getDescriptions } from "@/data/layouts/WelcomePageLayout/descriptions";
 
 import { Counter } from "./Counter";
+import { TextInputList } from "./TextInputList";
 import { Links } from "./Links";
-import { TextBox } from "@/components/layouts/WelcomePageLayout/TextBox";
 
 import styles from "./WelcomePage.module.css";
 
@@ -31,7 +31,7 @@ export const WelcomePageLayout = ({ fileName }) => {
 
       <Counter />
 
-      <TextBox />
+      <TextInputList />
 
       <h1 className={styles.headline}>{fileName} Page</h1>
 
