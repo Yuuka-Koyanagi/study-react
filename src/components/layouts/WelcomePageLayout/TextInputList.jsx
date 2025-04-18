@@ -1,26 +1,7 @@
-import { useState } from "react";
+import { useInputArray } from "@/hooks/useInputArray";
 
 export const TextInputList = () => {
-  const [text, setText] = useState("");
-
-  const handleChange = e => {
-    e.target.value.length <= 5
-      ? setText(e.target.value.trim())
-      : alert("5文字以内にしてください");
-  };
-
-  const [texts, setTexts] = useState([]);
-
-  const handleAdd = () => {
-    setTexts(prevTexts => {
-      if (prevTexts.includes(text)) {
-        alert("同じ値が含まれています");
-        return prevTexts;
-      };
-
-      return [...prevTexts, text];
-    });
-  };
+  const { text, texts, handleAdd, handleChange } = useInputArray();
 
   return (
     <>
