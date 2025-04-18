@@ -1,6 +1,6 @@
 import { useInputArray } from "@/hooks/useInputArray";
 
-export const TextInputList = () => {
+export const InputArray = () => {
   const { text, texts, handleAdd, handleChange } = useInputArray();
 
   return (

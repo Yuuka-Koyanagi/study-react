@@ -4,7 +4,7 @@ import { useBgLightBlue } from "@/hooks/useBgLightBlue"
 import { getDescriptions } from "@/data/layouts/WelcomePageLayout/descriptions";
 
 import { Counter } from "./Counter";
-import { TextInputList } from "./TextInputList";
+import { InputArray } from "./InputArray";
 import { Links } from "./Links";
 
 import styles from "./WelcomePage.module.css";
@@ -20,7 +20,7 @@ export const WelcomePageLayout = ({ fileName }) => {
 
       <Counter />
 
-      <TextInputList />
+      <InputArray />
 
       <h1 className={styles.headline}>{fileName} Page</h1>
 
