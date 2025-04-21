@@ -9,7 +9,7 @@ import "@/styles/globals.css";
 import styles from "@/styles/App.module.css";
 import { geistSans, geistMono } from "@/styles/fonts";
 
-export default function App({ Component, pageProps }) {
+export const App = ({ Component, pageProps }) => {
   const getLayout = Component.getLayout || (
     page => <WelcomePageLayout fileName={pageProps.fileName}>{page}</WelcomePageLayout>
   );
@@ -34,3 +34,4 @@ export default function App({ Component, pageProps }) {
     </>
   );
 };
+export default App;

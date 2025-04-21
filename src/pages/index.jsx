@@ -1,4 +1,5 @@
-export default function Home() { };
+const Home = () => { };
+export default Home;
 
 export async function getStaticProps() {
   return {
