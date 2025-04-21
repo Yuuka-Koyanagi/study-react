@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { useBgColor } from "@/hooks/useBgLightBlue"
+import { useBgColor } from "@/hooks/useBgColor"
 import { getDescriptions } from "@/data/layouts/WelcomePageLayout/descriptions";
 
 import { Counter } from "./Counter";
