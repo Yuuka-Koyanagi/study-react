@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { useBgLightBlue } from "@/hooks/useBgLightBlue"
+import { useBgColor } from "@/hooks/useBgLightBlue"
 import { getDescriptions } from "@/data/layouts/WelcomePageLayout/descriptions";
 
 import { Counter } from "./Counter";
@@ -10,7 +10,7 @@ import { Links } from "./Links";
 import styles from "./WelcomePage.module.css";
 
 export const WelcomePageLayout = ({ fileName }) => {
-  useBgLightBlue();
+  useBgColor();
 
   return (
     <>

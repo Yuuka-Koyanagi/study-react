@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+
+import { useMemo, useState } from "react";
 
 export const useCounter = () => {
   const [count, setCount] = useState(1);
@@ -13,7 +15,10 @@ export const useCounter = () => {
 
   const handleDisplay = () => setIsShow(prevIsShow => !prevIsShow);
 
-  const countDisplay = isShow ? <h1>{count}</h1> : null;
+  const pagePath = usePathname();
+  const effectiveCount = pagePath === "/" ? count : count * 2;
+
+  const countDisplay = isShow ? <h1>{effectiveCount}</h1> : null;
   const toggleButtonLabel = isShow ? "非表示" : "表示";
 
   return { countDisplay, toggleButtonLabel, handleClick, handleDisplay };
